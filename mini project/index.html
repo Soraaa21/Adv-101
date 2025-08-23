@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project by Tadashi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Mini Project: Fruit & Number Analyzer</h2>
+        <script>
+            function greetUser(name) {
+                return "Hello, " + name + "!";
+            }
+
+            const BASE_NUMBER = 10;
+            let fruits = [];
+
+            let userName = prompt("Enter your name: ");
+            let num = parseInt(prompt("Enter a number: "));
+            let sentence = prompt("Enter a sentence: ");
+            for (let i = 0; i < 3; i++) {
+                let fruit = prompt("Enter your favorite fruit #" + (i+1));
+                fruits.push(fruit);
+            }
+            
+            let sum = BASE_NUMBER + num;
+            let diff = BASE_NUMBER - num;
+            let prod = BASE_NUMBER * num;
+            let quot = BASE_NUMBER / num;
+            
+            document.write("<h3>1. Arithmetic Results</h3>");
+            document.write("Addition: " + sum + "<br>");
+            document.write("Subtraction: " + diff + "<br>");
+            document.write("Multiplication: " + prod + "<br>");
+            document.write("Division: " + quot + "<br>");
+
+            document.write("<h3>2. String Manipulation</h3>");
+            document.write("Uppercase: " + sentence.toUpperCase() + "<br>");
+            document.write("Lowercase: " + sentence.toLowerCase() + "<br>");
+
+            if (num > 0) {
+                document.write("<h3>" + num + " is Positive (if statement)</h3>");
+            } else if (num < 0) {
+                document.write("<h3>" + num + " is Negative (if statement)</h3>");
+            } else {
+                document.write("<h3>" + num + " is Zero (if statement)</h3>");
+            }
+
+            let result = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+            document.write("<p>" + num + " is " + result + " (ternary)</p>");
+
+            document.write("<h3>3. Loops</h3>");
+            document.write("<b>For Loop (1 to " + num + "):</b><br>");
+            for (let i = 1; i <= num; i++) {
+                document.write(i + " ");
+            }
+
+            document.write("<br><b>While Loop (countdown from 5):</b><br>");
+            let count = 5;
+            while (count >= 1) {
+                document.write(count + " ");
+                count--;
+            }
+
+            document.write("<h3>4. Function Example</h3>");
+            document.write(greetUser(userName) + "<br>");
+
+
+            document.write("<h3>5. Favorite Fruits</h3>");
+            document.write("Your favorite fruits are: " + fruits.join(", "));
+        </script>
+    </body>
+</html>
