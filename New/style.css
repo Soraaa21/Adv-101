@@ -1,0 +1,29 @@
+body {
+  background-color: grey;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 4px 0;
+}
+
+.highlight {
+  font-weight: bold;
+  color: darkred;
+}
